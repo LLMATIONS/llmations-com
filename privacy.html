@@ -2,137 +2,250 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Privacy | LLMATIONS</title>
-<meta name="description" content="What llmations.com collects, what we don't, and how to reach us.">
-<meta name="theme-color" content="#0d0d0d">
-<meta name="robots" content="index,follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy &middot; LLMATIONS</title>
+<meta name="description" content="llmations.com is a static company page. There is almost nothing about you to collect here.">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LLMATIONS">
+<meta property="og:title" content="Privacy &middot; LLMATIONS">
+<meta property="og:description" content="llmations.com is a static company page. There is almost nothing about you to collect here.">
+<meta property="og:url" content="https://llmations.com/privacy.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Privacy &middot; LLMATIONS">
+<meta name="twitter:description" content="llmations.com is a static company page. There is almost nothing about you to collect here.">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='10'%20fill='%23191B17'/%3E%3Crect%20x='0'%20y='0'%20width='64'%20height='5'%20fill='%233E6A51'/%3E%3Ctext%20x='32'%20y='45'%20font-family='Arial,Helvetica,sans-serif'%20font-weight='800'%20font-size='30'%20letter-spacing='-2'%20fill='%23F2F1ED'%20text-anchor='middle'%3ELL%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..850&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&family=Spline+Sans+Mono:wght@400..600&display=swap" rel="stylesheet">
+
 <style>
-:root {
-  color-scheme: dark;
-  --bg-near-black: #0d0d0d;
-  --bg-deep-purple: #1a0a2e;
-  --fg: #f0ecf7;
-  --dim: #9a92ab;
-  --neon-purple: #b44fff;
-  --neon-teal: #00f5d4;
-  --card-border: rgba(180, 79, 255, 0.18);
+:root{
+  --paper:#F2F1ED;
+  --paper-dim:#E8E6DF;
+  --ink:#191B17;
+  --text:#26281F;
+  --muted:#5A5D52;
+  --cover-text:#EFEEE8;
+  --cover-muted:#A8AB9E;
+  --patina:#3E6A51;
+  --patina-bright:#93C6A8;
+  --rule:rgba(25,27,23,.16);
+  --rule-inv:rgba(239,238,232,.18);
+  --ease:cubic-bezier(.2,.7,.3,1);
 }
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
-  color: var(--fg);
-  line-height: 1.65;
-  min-height: 100dvh;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--bg-near-black);
-  background-image: linear-gradient(135deg, var(--bg-near-black) 0%, var(--bg-deep-purple) 100%);
-  background-attachment: fixed;
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--text);
+  font-family:"Source Serif 4",Georgia,"Times New Roman",serif;
+  font-optical-sizing:auto;
+  font-size:1.05rem;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
 }
-main {
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 2.5rem 1.5rem 3rem;
-  flex: 1;
-  width: 100%;
+::selection{background:var(--patina);color:var(--paper)}
+:focus-visible{outline:2px solid var(--patina);outline-offset:3px;border-radius:2px}
+.cover :focus-visible,.foot :focus-visible{outline-color:var(--patina-bright)}
+
+.container{max-width:66rem;margin-inline:auto;padding-inline:clamp(1.25rem,5vw,3rem)}
+
+.skip{
+  position:absolute;left:1rem;top:-4rem;z-index:10;
+  background:var(--paper);color:var(--ink);
+  font-family:Archivo,"Helvetica Neue",Arial,sans-serif;font-size:.85rem;font-weight:600;
+  padding:.6rem 1rem;text-decoration:none;
 }
-.home-link {
-  display: inline-block;
-  font-size: 0.85rem;
-  color: var(--dim);
-  text-decoration: none;
-  margin-bottom: 1.5rem;
-  letter-spacing: 0.02em;
+.skip:focus{top:1rem}
+
+/* ---------- ink cover ---------- */
+.cover{background:var(--ink);color:var(--cover-text);border-top:4px solid var(--patina)}
+.masthead{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.75rem 1.25rem;padding-top:1.9rem}
+.wordmark{
+  font-family:Archivo,"Helvetica Neue",Arial,sans-serif;
+  font-weight:790;font-stretch:125%;
+  font-size:1.08rem;letter-spacing:.045em;
+  color:inherit;text-decoration:none;
 }
-.home-link:hover { color: var(--neon-teal); }
-h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin: 0 0 0.5rem;
+.mast-link{
+  font-family:"Spline Sans Mono",ui-monospace,Menlo,Consolas,monospace;
+  font-size:.7rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--cover-muted);text-decoration:none;
+  border-bottom:1px solid var(--rule-inv);padding-bottom:.4em;
+  transition:color .18s var(--ease),border-color .18s var(--ease);
 }
-.lede {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--neon-purple);
-  margin: 0.25rem 0 0.5rem;
+.mast-link:hover{color:var(--patina-bright);border-color:currentColor}
+.cover-main{padding-block:clamp(3.5rem,9vh,6rem) clamp(3rem,8vh,5rem)}
+.lede{
+  margin:0;
+  font-weight:490;
+  font-size:clamp(2.3rem,1.4rem + 3.6vw,3.6rem);
+  line-height:1.06;letter-spacing:-.016em;
 }
-.effective {
-  font-size: 0.85rem;
-  color: var(--dim);
-  margin: 0 0 2rem;
+.sub{
+  margin:1.8rem 0 0;max-width:52ch;
+  font-size:clamp(1.05rem,.95rem + .45vw,1.2rem);line-height:1.7;
+  color:var(--cover-muted);
 }
-h2 {
-  font-size: 1.15rem;
-  font-weight: 600;
-  margin: 2rem 0 0.5rem;
-  color: var(--fg);
+.effective{
+  margin:2.4rem 0 0;
+  font-family:"Spline Sans Mono",ui-monospace,Menlo,Consolas,monospace;
+  font-size:.68rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--cover-muted);
 }
-p { margin: 0.5rem 0; color: var(--fg); }
-ul { margin: 0.5rem 0; padding-left: 1.3rem; }
-li { margin: 0.25rem 0; }
-a { color: var(--neon-teal); text-decoration: underline; text-underline-offset: 3px; }
-a:hover { color: var(--neon-purple); }
-strong { font-weight: 700; }
-footer {
-  border-top: 1px solid var(--card-border);
-  padding: 1.4rem;
-  text-align: center;
-  font-size: 0.85rem;
-  color: var(--dim);
+
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.cover .masthead{animation:rise .6s .05s var(--ease) both}
+.cover .cover-main{animation:rise .7s .16s var(--ease) both}
+
+/* ---------- policy clauses ---------- */
+.policy{padding-block:clamp(2.5rem,7vh,4.5rem) 0}
+.clause{
+  display:grid;grid-template-columns:15rem 1fr;gap:1rem 3.5rem;
+  padding-block:2.4rem;
 }
-footer a {
-  display: inline-block;
-  padding: 0.4rem 0.4rem;
-  color: var(--dim);
-  text-decoration: underline;
-  text-decoration-color: var(--card-border);
-  text-underline-offset: 3px;
+.clause + .clause{border-top:1px solid var(--rule)}
+.clause h2{
+  margin:0;
+  font-family:Archivo,"Helvetica Neue",Arial,sans-serif;
+  font-weight:650;font-size:1.05rem;letter-spacing:-.005em;line-height:1.4;
+  color:var(--ink);
 }
-footer a:hover { color: var(--neon-teal); }
+.clause p{margin:0}
+.clause p + p{margin-top:1em}
+.clause a{
+  color:var(--patina);
+  text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;
+  transition:color .18s var(--ease);
+}
+.clause a:hover{color:var(--ink)}
+
+/* ---------- ink footer ---------- */
+.foot{background:var(--ink);color:var(--cover-text);margin-top:clamp(3.5rem,9vh,6rem)}
+.foot-inner{display:flex;flex-wrap:wrap;align-items:baseline;gap:1.25rem 2.5rem;padding-block:3.2rem 2.8rem}
+.foot .wordmark{font-size:.95rem}
+.foot-links{display:flex;flex-wrap:wrap;gap:1.25rem 2.25rem;margin-left:auto}
+.foot-legal{
+  flex-basis:100%;margin:1.9rem 0 0;
+  font-family:"Spline Sans Mono",ui-monospace,Menlo,Consolas,monospace;
+  font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--cover-muted);
+}
+
+/* ---------- small screens ---------- */
+@media (max-width:720px){
+  .clause{grid-template-columns:1fr;gap:.65rem}
+  .foot-links{margin-left:0;flex-basis:100%}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
 </style>
 </head>
 <body>
-<main>
-<a class="home-link" href="/">&larr; Back to LLMATIONS</a>
 
-<h1>Privacy</h1>
-<p class="lede">llmations.com is a static company page. There is almost nothing about you to collect here.</p>
-<p class="effective">Effective 2026-07-12</p>
+<a class="skip" href="#main">Skip to content</a>
 
-<h2>What this site collects</h2>
-<p>Nothing, directly. llmations.com (this page and the one before it) is static HTML. There are no forms, no account signup, no analytics, no advertising, and no cookies.</p>
+<header class="cover">
+  <div class="container">
+    <div class="masthead">
+      <a class="wordmark" href="/">LLMATIONS</a>
+      <a class="mast-link" href="/"><span aria-hidden="true">&larr;&nbsp;</span>Back to LLMATIONS</a>
+    </div>
+    <div class="cover-main">
+      <h1 class="lede">Privacy</h1>
+      <p class="sub">llmations.com is a static company page. There is almost nothing about you to collect here.</p>
+      <p class="effective">Effective 2026-07-12</p>
+    </div>
+  </div>
+</header>
 
-<h2>Server logs</h2>
-<p>Our web server keeps standard access logs (IP address, user agent, request path, HTTP status) for debugging and abuse prevention. These logs are retained for a limited period and are not used to build a profile of you or shared with third parties.</p>
+<main id="main">
+  <div class="policy container">
 
-<h2>Cookies and storage</h2>
-<p>This page sets no cookies, writes nothing to localStorage or sessionStorage, and registers no service worker.</p>
+    <section class="clause">
+      <h2>What this site collects</h2>
+      <div>
+        <p>Nothing, directly. llmations.com (this page and the one before it) is static HTML. There are no forms, no account signup, no analytics, no advertising, and no cookies.</p>
+      </div>
+    </section>
 
-<h2>Email</h2>
-<p>Mail sent to an @llmations.com address (<a href="mailto:hello@llmations.com">hello@</a>, <a href="mailto:support@llmations.com">support@</a>, <a href="mailto:privacy@llmations.com">privacy@</a>) reaches the founders directly and is handled like any other inbox: read, replied to, deleted when no longer needed. We don't add senders to a list or use the address for anything beyond answering what was asked.</p>
+    <section class="clause">
+      <h2>Server logs</h2>
+      <div>
+        <p>Our web server keeps standard access logs (IP address, user agent, request path, HTTP status) for debugging and abuse prevention. These logs are retained for a limited period and are not used to build a profile of you or shared with third parties.</p>
+      </div>
+    </section>
 
-<h2>The products</h2>
-<p>llmations.com is the company page. The products it links to, <a href="https://guild-masters.com">Guild Masters</a> and <a href="https://hype.swagcounty.com">hype</a>, are separate applications that do collect account data, because they need it to work (login, roster data, that kind of thing). Each publishes its own privacy policy on its own site, and that policy governs what happens there, not this one.</p>
+    <section class="clause">
+      <h2>Cookies and storage</h2>
+      <div>
+        <p>This page sets no cookies, writes nothing to localStorage or sessionStorage, and registers no service worker.</p>
+      </div>
+    </section>
 
-<h2>Third parties</h2>
-<p>llmations.com does not embed third-party scripts, analytics, ads, or tracking pixels. The page uses social-preview metadata (Open Graph and Twitter Card) so links shared on other platforms render with a title and description; those platforms fetch that metadata directly and we receive no information back about who shared it.</p>
+    <section class="clause">
+      <h2>Email</h2>
+      <div>
+        <p>Mail sent to an @llmations.com address (hello@, support@, privacy@) reaches the founders directly and is handled like any other inbox: read, replied to, deleted when no longer needed. We don't add senders to a list or use the address for anything beyond answering what was asked.</p>
+      </div>
+    </section>
 
-<h2>Your rights</h2>
-<p>Since this site stores no personal data about you server-side, there is nothing for us to export, correct, or delete on request. If you are in the EU, UK, or California and want to exercise a data right anyway, email <a href="mailto:privacy@llmations.com">privacy@llmations.com</a> and we will confirm in writing that we hold no records about you here. For the products themselves, use their own privacy contact.</p>
+    <section class="clause">
+      <h2>The products</h2>
+      <div>
+        <p>llmations.com is the company page. The products it links to, <a href="https://guild-masters.com">Guild Masters</a> and <a href="https://hype.swagcounty.com">hype</a>, are separate applications that do collect account data, because they need it to work (login, roster data, that kind of thing). Each publishes its own privacy policy on its own site, and that policy governs what happens there, not this one.</p>
+      </div>
+    </section>
 
-<h2>Contact</h2>
-<p>Privacy questions, data requests, or anything else: <a href="mailto:privacy@llmations.com">privacy@llmations.com</a>.</p>
+    <section class="clause">
+      <h2>Third parties</h2>
+      <div>
+        <p>llmations.com does not embed third-party scripts, analytics, ads, or tracking pixels. The page uses social-preview metadata (Open Graph and Twitter Card) so links shared on other platforms render with a title and description; those platforms fetch that metadata directly and we receive no information back about who shared it.</p>
+      </div>
+    </section>
 
-<h2>Changes to this policy</h2>
-<p>If we change how llmations.com handles data, this page will be updated and the effective date at the top will move forward.</p>
+    <section class="clause">
+      <h2>Your rights</h2>
+      <div>
+        <p>Since this site stores no personal data about you server-side, there is nothing for us to export, correct, or delete on request. If you are in the EU, UK, or California and want to exercise a data right anyway, email <a href="mailto:privacy@llmations.com">privacy@llmations.com</a> and we will confirm in writing that we hold no records about you here. For the products themselves, use their own privacy contact.</p>
+      </div>
+    </section>
+
+    <section class="clause">
+      <h2>Contact</h2>
+      <div>
+        <p>Privacy questions, data requests, or anything else: <a href="mailto:privacy@llmations.com">privacy@llmations.com</a>.</p>
+      </div>
+    </section>
+
+    <section class="clause">
+      <h2>Changes to this policy</h2>
+      <div>
+        <p>If we change how llmations.com handles data, this page will be updated and the effective date at the top will move forward.</p>
+      </div>
+    </section>
+
+  </div>
 </main>
 
-<footer>
-  Questions, support, anything else &rarr; <a href="mailto:hello@llmations.com">hello@llmations.com</a>
-  &nbsp;&middot;&nbsp;
-  <a href="/privacy.html">Privacy</a>
+<footer class="foot">
+  <div class="container foot-inner">
+    <span class="wordmark">LLMATIONS</span>
+    <div class="foot-links">
+      <a class="mast-link" href="mailto:hello@llmations.com">hello@llmations.com</a>
+      <a class="mast-link" href="/privacy.html">Privacy</a>
+    </div>
+    <p class="foot-legal">&copy; 2026 LLMATIONS LLC</p>
+  </div>
 </footer>
+
 </body>
 </html>

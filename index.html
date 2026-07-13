@@ -2,216 +2,269 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>LLMATIONS</title>
-<meta name="description" content="LLMATIONS LLC, a small software company building web products.">
-<meta name="theme-color" content="#0d0d0d">
-<meta property="og:title" content="LLMATIONS">
-<meta property="og:description" content="LLMATIONS LLC, a small software company building web products.">
-<meta property="og:url" content="https://llmations.com">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LLMATIONS LLC</title>
+<meta name="description" content="LLMATIONS LLC builds web products, then keeps running them. A small company, three people, no venture money.">
+
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="LLMATIONS">
+<meta property="og:title" content="LLMATIONS LLC">
+<meta property="og:description" content="LLMATIONS LLC builds web products, then keeps running them. A small company, three people, no venture money.">
+<meta property="og:url" content="https://llmations.com/">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LLMATIONS">
-<meta name="twitter:description" content="LLMATIONS LLC, a small software company building web products.">
+<meta name="twitter:title" content="LLMATIONS LLC">
+<meta name="twitter:description" content="LLMATIONS LLC builds web products, then keeps running them. A small company, three people, no venture money.">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='10'%20fill='%23191B17'/%3E%3Crect%20x='0'%20y='0'%20width='64'%20height='5'%20fill='%233E6A51'/%3E%3Ctext%20x='32'%20y='45'%20font-family='Arial,Helvetica,sans-serif'%20font-weight='800'%20font-size='30'%20letter-spacing='-2'%20fill='%23F2F1ED'%20text-anchor='middle'%3ELL%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..850&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&family=Spline+Sans+Mono:wght@400..600&display=swap" rel="stylesheet">
+
 <style>
-:root {
-  color-scheme: dark;
-  --bg-near-black: #0d0d0d;
-  --bg-deep-purple: #1a0a2e;
-  --fg: #f0ecf7;
-  --dim: #9a92ab;
-  --neon-purple: #b44fff;
-  --neon-teal: #00f5d4;
-  --card-bg: rgba(255, 255, 255, 0.025);
-  --card-border: rgba(180, 79, 255, 0.18);
+:root{
+  --paper:#F2F1ED;
+  --paper-dim:#E8E6DF;
+  --ink:#191B17;
+  --text:#26281F;
+  --muted:#5A5D52;
+  --cover-text:#EFEEE8;
+  --cover-muted:#A8AB9E;
+  --patina:#3E6A51;
+  --patina-bright:#93C6A8;
+  --live:#4C8A65;
+  --amber:#A17E33;
+  --rule:rgba(25,27,23,.16);
+  --rule-inv:rgba(239,238,232,.18);
+  --ease:cubic-bezier(.2,.7,.3,1);
 }
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
-  color: var(--fg);
-  line-height: 1.6;
-  min-height: 100dvh;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--bg-near-black);
-  background-image: linear-gradient(135deg, var(--bg-near-black) 0%, var(--bg-deep-purple) 100%);
-  background-attachment: fixed;
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--text);
+  font-family:"Source Serif 4",Georgia,"Times New Roman",serif;
+  font-optical-sizing:auto;
+  font-size:1.05rem;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
 }
-main {
-  max-width: 640px;
-  margin: 0 auto;
-  padding: 3rem 1.5rem 2rem;
-  flex: 1;
-  width: 100%;
+::selection{background:var(--patina);color:var(--paper)}
+:focus-visible{outline:2px solid var(--patina);outline-offset:3px;border-radius:2px}
+.cover :focus-visible,.foot :focus-visible{outline-color:var(--patina-bright)}
+
+.container{max-width:66rem;margin-inline:auto;padding-inline:clamp(1.25rem,5vw,3rem)}
+
+.skip{
+  position:absolute;left:1rem;top:-4rem;z-index:10;
+  background:var(--paper);color:var(--ink);
+  font-family:Archivo,"Helvetica Neue",Arial,sans-serif;font-size:.85rem;font-weight:600;
+  padding:.6rem 1rem;text-decoration:none;
 }
-.wordmark {
-  font-size: 1.6rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  text-align: center;
-  background: linear-gradient(135deg, var(--neon-purple), var(--neon-teal));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  margin: 0 0 0.6rem;
+.skip:focus{top:1rem}
+
+/* ---------- ink cover ---------- */
+.cover{background:var(--ink);color:var(--cover-text);border-top:4px solid var(--patina)}
+.masthead{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.75rem 1.25rem;padding-top:1.9rem}
+.wordmark{
+  font-family:Archivo,"Helvetica Neue",Arial,sans-serif;
+  font-weight:790;font-stretch:125%;
+  font-size:1.08rem;letter-spacing:.045em;
+  color:inherit;text-decoration:none;
 }
-.lede {
-  font-size: 1.15rem;
-  font-weight: 700;
-  text-align: center;
-  color: var(--neon-purple);
-  margin: 0 0 0.75rem;
+.mast-link{
+  font-family:"Spline Sans Mono",ui-monospace,Menlo,Consolas,monospace;
+  font-size:.7rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--cover-muted);text-decoration:none;
+  border-bottom:1px solid var(--rule-inv);padding-bottom:.4em;
+  transition:color .18s var(--ease),border-color .18s var(--ease);
 }
-.sub {
-  text-align: center;
-  color: var(--dim);
-  font-size: 0.95rem;
-  max-width: 480px;
-  margin: 0 auto 2.75rem;
+.mast-link:hover{color:var(--patina-bright);border-color:currentColor}
+.cover-main{padding-block:clamp(4.5rem,13vh,8.5rem) clamp(4rem,11vh,7.5rem)}
+.lede{
+  margin:0;
+  font-weight:490;
+  font-size:clamp(2.3rem,1.1rem + 5.2vw,4.4rem);
+  line-height:1.06;letter-spacing:-.016em;
+  max-width:20ch;
+  text-wrap:balance;
 }
-h2.section {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: var(--dim);
-  margin: 0 0 1rem;
-  font-weight: 700;
+.lede em{font-style:italic;color:var(--patina-bright)}
+.sub{
+  margin:2.1rem 0 0;max-width:52ch;
+  font-size:clamp(1.05rem,.95rem + .45vw,1.2rem);line-height:1.7;
+  color:var(--cover-muted);
 }
-.ventures {
-  display: grid;
-  gap: 0.9rem;
-  margin-bottom: 2.5rem;
+
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.cover .masthead{animation:rise .6s .05s var(--ease) both}
+.cover .lede{animation:rise .7s .16s var(--ease) both}
+.cover .sub{animation:rise .7s .3s var(--ease) both}
+
+/* ---------- paper sections ---------- */
+.section{padding-top:clamp(3.5rem,9vh,5.5rem)}
+.section-head{display:flex;align-items:center;gap:1.5rem}
+.section-head::after{content:"";height:1px;flex:1;background:var(--rule)}
+.eyebrow{
+  margin:0;
+  font-family:"Spline Sans Mono",ui-monospace,Menlo,Consolas,monospace;
+  font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--patina);
 }
-.card {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 10px;
-  padding: 1.1rem 1.4rem;
-  text-decoration: none;
-  color: inherit;
-  display: block;
-  transition: transform 0.14s ease, border-color 0.14s ease, box-shadow 0.14s ease;
+
+/* ventures register */
+.register{list-style:none;margin:2.4rem 0 0;padding:0}
+.register li{border-top:1px solid var(--rule)}
+.register li:first-child{border-top:0}
+.register li:last-child{border-bottom:1px solid var(--rule)}
+.reg-link{
+  display:block;color:inherit;text-decoration:none;
+  padding:2rem clamp(.75rem,2vw,1.4rem);
+  margin-inline:calc(-1 * clamp(.75rem,2vw,1.4rem));
+  transition:background-color .18s var(--ease);
 }
-.card:hover, .card:focus-visible {
-  transform: translateY(-1px);
-  border-color: var(--neon-purple);
-  box-shadow: 0 0 0 1px rgba(180, 79, 255, 0.25), 0 8px 30px -10px rgba(180, 79, 255, 0.35);
-  outline: none;
+.reg-link:hover{background:var(--paper-dim)}
+.reg-top{display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap}
+.reg-name{
+  font-family:Archivo,"Helvetica Neue",Arial,sans-serif;
+  font-weight:640;font-size:1.42rem;letter-spacing:-.01em;
+  color:var(--ink);
 }
-@media (prefers-reduced-motion: reduce) {
-  .card:hover, .card:focus-visible { transform: none; }
+.status{
+  display:inline-flex;align-items:center;gap:.55em;
+  font-family:"Spline Sans Mono",ui-monospace,Menlo,Consolas,monospace;
+  font-size:.64rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);
+  border:1px solid var(--rule);border-radius:999px;
+  padding:.45em .85em .4em;
+  position:relative;top:-.2em;white-space:nowrap;
 }
-.card .row {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 0.75rem;
-  flex-wrap: wrap;
+.status .dot{width:.42em;height:.42em;border-radius:50%;background:var(--amber)}
+.status.live .dot{background:var(--live)}
+.reg-domain{
+  margin-left:auto;
+  font-family:"Spline Sans Mono",ui-monospace,Menlo,Consolas,monospace;
+  font-size:.78rem;font-weight:500;letter-spacing:.03em;
+  color:var(--patina);white-space:nowrap;
 }
-.card .name {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin: 0;
+.reg-domain .arrow{display:inline-block;margin-left:.4em;transition:transform .18s var(--ease)}
+.reg-link:hover .arrow{transform:translate(2px,-2px)}
+.reg-desc{margin:.85rem 0 0;max-width:58ch}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem 4.5rem;margin-top:2.4rem}
+.about-grid p{margin:0;font-size:1.08rem;line-height:1.72}
+.about-grid strong{
+  display:block;
+  font-family:Archivo,"Helvetica Neue",Arial,sans-serif;
+  font-weight:650;font-size:1.05rem;letter-spacing:-.005em;
+  color:var(--ink);margin-bottom:.65rem;
 }
-.card .url {
-  font-size: 0.8rem;
-  color: var(--neon-teal);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+/* ---------- ink footer ---------- */
+.foot{background:var(--ink);color:var(--cover-text);margin-top:clamp(4.5rem,11vh,7.5rem)}
+.foot-inner{display:flex;flex-wrap:wrap;align-items:baseline;gap:1.25rem 2.5rem;padding-block:3.2rem 2.8rem}
+.foot .wordmark{font-size:.95rem}
+.foot-links{display:flex;flex-wrap:wrap;gap:1.25rem 2.25rem;margin-left:auto}
+.foot-legal{
+  flex-basis:100%;margin:1.9rem 0 0;
+  font-family:"Spline Sans Mono",ui-monospace,Menlo,Consolas,monospace;
+  font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--cover-muted);
 }
-.card .desc {
-  color: var(--fg);
-  margin: 0.4rem 0 0;
-  font-size: 0.95rem;
+
+/* ---------- small screens ---------- */
+@media (max-width:640px){
+  .reg-domain{margin-left:0;flex-basis:100%;order:3}
+  .about-grid{grid-template-columns:1fr}
+  .foot-links{margin-left:0;flex-basis:100%}
 }
-.status {
-  font-size: 0.62rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 700;
-  padding: 0.15rem 0.5rem;
-  border-radius: 999px;
-  white-space: nowrap;
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
 }
-.status.live {
-  color: var(--bg-near-black);
-  background: var(--neon-teal);
-}
-.status.building {
-  color: var(--fg);
-  background: transparent;
-  border: 1px solid var(--card-border);
-}
-.about {
-  border-top: 1px solid var(--card-border);
-  padding-top: 1.75rem;
-  font-size: 0.9rem;
-  color: var(--dim);
-}
-.about p { margin: 0.5rem 0; }
-.about strong { color: var(--fg); }
-footer {
-  border-top: 1px solid var(--card-border);
-  padding: 1.4rem;
-  text-align: center;
-  font-size: 0.85rem;
-  color: var(--dim);
-}
-footer a {
-  display: inline-block;
-  padding: 0.4rem 0;
-  color: var(--dim);
-  text-decoration: underline;
-  text-decoration-color: var(--card-border);
-  text-underline-offset: 3px;
-  transition: color 0.14s ease;
-}
-footer a:hover { color: var(--neon-teal); }
 </style>
 </head>
 <body>
-<main>
-<p class="wordmark">LLMATIONS</p>
-<p class="lede">LLMATIONS LLC builds web products, then keeps running them.</p>
-<p class="sub">A small company, three people, no venture money. This page exists so the products below have a company behind them, not just a URL.</p>
 
-<h2 class="section">Ventures</h2>
-<div class="ventures">
-  <a class="card" href="https://guild-masters.com">
-    <div class="row">
-      <p class="name">Guild Masters</p>
-      <span class="status building">Building</span>
-    </div>
-    <p class="url">guild-masters.com</p>
-    <p class="desc">Roster, raid signup, and loot tracking for World of Warcraft guilds that outgrew a spreadsheet and a Discord bot cobbled together from three others.</p>
-  </a>
-  <a class="card" href="https://hype.swagcounty.com">
-    <div class="row">
-      <p class="name">hype</p>
-      <span class="status live">Live</span>
-    </div>
-    <p class="url">hype.swagcounty.com</p>
-    <p class="desc">A guild toolbox for classic-era WoW: leveling routes, a name vote, the occasional parse. The prototype that led to Guild Masters.</p>
-  </a>
-  <a class="card" href="https://swagcounty.com">
-    <div class="row">
-      <p class="name">Swag County</p>
-      <span class="status live">Live</span>
-    </div>
-    <p class="url">swagcounty.com</p>
-    <p class="desc">The workshop. Small, weird, finished things get a card here before they get a bigger home.</p>
-  </a>
-</div>
+<a class="skip" href="#main">Skip to content</a>
 
-<div class="about">
-  <p><strong>What LLMATIONS is.</strong> The legal entity behind the products above and whatever ships next. No single product is the company; the company outlives any one of them.</p>
-  <p><strong>How we work.</strong> We build what we'd use ourselves first, ship it, then find out if anyone else wants it. Nothing here runs on outside funding.</p>
-</div>
+<header class="cover">
+  <div class="container">
+    <div class="masthead">
+      <span class="wordmark">LLMATIONS</span>
+      <a class="mast-link" href="mailto:hello@llmations.com">hello@llmations.com</a>
+    </div>
+    <div class="cover-main">
+      <h1 class="lede">LLMATIONS LLC builds web products, then <em>keeps running them.</em></h1>
+      <p class="sub">A small company, three people, no venture money. This page exists so the products below have a company behind them, not just a URL.</p>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="section container" aria-labelledby="ventures-h">
+    <div class="section-head">
+      <h2 class="eyebrow" id="ventures-h">Ventures</h2>
+    </div>
+    <ul class="register">
+      <li>
+        <a class="reg-link" href="https://guild-masters.com">
+          <div class="reg-top">
+            <span class="reg-name">Guild Masters</span>
+            <span class="status"><span class="dot" aria-hidden="true"></span>Building</span>
+            <span class="reg-domain">guild-masters.com<span class="arrow" aria-hidden="true">&#8599;</span></span>
+          </div>
+          <p class="reg-desc">Roster, raid signup, and loot tracking for World of Warcraft guilds that outgrew a spreadsheet and a Discord bot cobbled together from three others.</p>
+        </a>
+      </li>
+      <li>
+        <a class="reg-link" href="https://hype.swagcounty.com">
+          <div class="reg-top">
+            <span class="reg-name">hype</span>
+            <span class="status live"><span class="dot" aria-hidden="true"></span>Live</span>
+            <span class="reg-domain">hype.swagcounty.com<span class="arrow" aria-hidden="true">&#8599;</span></span>
+          </div>
+          <p class="reg-desc">A guild toolbox for classic-era WoW: leveling routes, a name vote, the occasional parse. The prototype that led to Guild Masters.</p>
+        </a>
+      </li>
+      <li>
+        <a class="reg-link" href="https://swagcounty.com">
+          <div class="reg-top">
+            <span class="reg-name">Swag County</span>
+            <span class="status live"><span class="dot" aria-hidden="true"></span>Live</span>
+            <span class="reg-domain">swagcounty.com<span class="arrow" aria-hidden="true">&#8599;</span></span>
+          </div>
+          <p class="reg-desc">The workshop. Small, weird, finished things get a card here before they get a bigger home.</p>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="section container" aria-labelledby="about-h">
+    <div class="section-head">
+      <h2 class="eyebrow" id="about-h">About</h2>
+    </div>
+    <div class="about-grid">
+      <p><strong>What LLMATIONS is.</strong> The legal entity behind the products above and whatever ships next. No single product is the company; the company outlives any one of them.</p>
+      <p><strong>How we work.</strong> We build what we'd use ourselves first, ship it, then find out if anyone else wants it. Nothing here runs on outside funding.</p>
+    </div>
+  </section>
 </main>
-<footer>
-  Questions, support, anything else &rarr; <a href="mailto:hello@llmations.com">hello@llmations.com</a>
-  &nbsp;&middot;&nbsp;
-  <a href="/privacy.html">Privacy</a>
+
+<footer class="foot">
+  <div class="container foot-inner">
+    <span class="wordmark">LLMATIONS</span>
+    <div class="foot-links">
+      <a class="mast-link" href="mailto:hello@llmations.com">hello@llmations.com</a>
+      <a class="mast-link" href="/privacy.html">Privacy</a>
+    </div>
+    <p class="foot-legal">&copy; 2026 LLMATIONS LLC</p>
+  </div>
 </footer>
+
 </body>
 </html>
