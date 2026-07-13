@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LLMATIONS</title>
+<meta name="description" content="LLMATIONS LLC, a small software company building web products.">
+<meta name="theme-color" content="#0d0d0d">
+<meta property="og:title" content="LLMATIONS">
+<meta property="og:description" content="LLMATIONS LLC, a small software company building web products.">
+<meta property="og:url" content="https://llmations.com">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="LLMATIONS">
+<meta name="twitter:description" content="LLMATIONS LLC, a small software company building web products.">
+<style>
+:root {
+  color-scheme: dark;
+  --bg-near-black: #0d0d0d;
+  --bg-deep-purple: #1a0a2e;
+  --fg: #f0ecf7;
+  --dim: #9a92ab;
+  --neon-purple: #b44fff;
+  --neon-teal: #00f5d4;
+  --card-bg: rgba(255, 255, 255, 0.025);
+  --card-border: rgba(180, 79, 255, 0.18);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+  color: var(--fg);
+  line-height: 1.6;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-near-black);
+  background-image: linear-gradient(135deg, var(--bg-near-black) 0%, var(--bg-deep-purple) 100%);
+  background-attachment: fixed;
+}
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 2rem;
+  flex: 1;
+  width: 100%;
+}
+.wordmark {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-align: center;
+  background: linear-gradient(135deg, var(--neon-purple), var(--neon-teal));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 0 0 0.6rem;
+}
+.lede {
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--neon-purple);
+  margin: 0 0 0.75rem;
+}
+.sub {
+  text-align: center;
+  color: var(--dim);
+  font-size: 0.95rem;
+  max-width: 480px;
+  margin: 0 auto 2.75rem;
+}
+h2.section {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--dim);
+  margin: 0 0 1rem;
+  font-weight: 700;
+}
+.ventures {
+  display: grid;
+  gap: 0.9rem;
+  margin-bottom: 2.5rem;
+}
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 1.1rem 1.4rem;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.14s ease, border-color 0.14s ease, box-shadow 0.14s ease;
+}
+.card:hover, .card:focus-visible {
+  transform: translateY(-1px);
+  border-color: var(--neon-purple);
+  box-shadow: 0 0 0 1px rgba(180, 79, 255, 0.25), 0 8px 30px -10px rgba(180, 79, 255, 0.35);
+  outline: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .card:hover, .card:focus-visible { transform: none; }
+}
+.card .row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.card .name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+}
+.card .url {
+  font-size: 0.8rem;
+  color: var(--neon-teal);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+.card .desc {
+  color: var(--fg);
+  margin: 0.4rem 0 0;
+  font-size: 0.95rem;
+}
+.status {
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.status.live {
+  color: var(--bg-near-black);
+  background: var(--neon-teal);
+}
+.status.building {
+  color: var(--fg);
+  background: transparent;
+  border: 1px solid var(--card-border);
+}
+.about {
+  border-top: 1px solid var(--card-border);
+  padding-top: 1.75rem;
+  font-size: 0.9rem;
+  color: var(--dim);
+}
+.about p { margin: 0.5rem 0; }
+.about strong { color: var(--fg); }
+footer {
+  border-top: 1px solid var(--card-border);
+  padding: 1.4rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--dim);
+}
+footer a {
+  display: inline-block;
+  padding: 0.4rem 0;
+  color: var(--dim);
+  text-decoration: underline;
+  text-decoration-color: var(--card-border);
+  text-underline-offset: 3px;
+  transition: color 0.14s ease;
+}
+footer a:hover { color: var(--neon-teal); }
+</style>
+</head>
+<body>
+<main>
+<p class="wordmark">LLMATIONS</p>
+<p class="lede">LLMATIONS LLC builds web products, then keeps running them.</p>
+<p class="sub">A small company, three people, no venture money. This page exists so the products below have a company behind them, not just a URL.</p>
+
+<h2 class="section">Ventures</h2>
+<div class="ventures">
+  <a class="card" href="https://guild-masters.com">
+    <div class="row">
+      <p class="name">Guild Masters</p>
+      <span class="status building">Building</span>
+    </div>
+    <p class="url">guild-masters.com</p>
+    <p class="desc">Roster, raid signup, and loot tracking for World of Warcraft guilds that outgrew a spreadsheet and a Discord bot cobbled together from three others.</p>
+  </a>
+  <a class="card" href="https://hype.swagcounty.com">
+    <div class="row">
+      <p class="name">hype</p>
+      <span class="status live">Live</span>
+    </div>
+    <p class="url">hype.swagcounty.com</p>
+    <p class="desc">A guild toolbox for classic-era WoW: leveling routes, a name vote, the occasional parse. The prototype that led to Guild Masters.</p>
+  </a>
+  <a class="card" href="https://swagcounty.com">
+    <div class="row">
+      <p class="name">Swag County</p>
+      <span class="status live">Live</span>
+    </div>
+    <p class="url">swagcounty.com</p>
+    <p class="desc">The workshop. Small, weird, finished things get a card here before they get a bigger home.</p>
+  </a>
+</div>
+
+<div class="about">
+  <p><strong>What LLMATIONS is.</strong> The legal entity behind the products above and whatever ships next. No single product is the company; the company outlives any one of them.</p>
+  <p><strong>How we work.</strong> We build what we'd use ourselves first, ship it, then find out if anyone else wants it. Nothing here runs on outside funding.</p>
+</div>
+</main>
+<footer>
+  Questions, support, anything else &rarr; <a href="mailto:hello@llmations.com">hello@llmations.com</a>
+  &nbsp;&middot;&nbsp;
+  <a href="/privacy.html">Privacy</a>
+</footer>
+</body>
+</html>
